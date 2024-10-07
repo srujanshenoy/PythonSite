@@ -238,4 +238,4 @@ calc(0, True)
 ```
 {collapsible="true" default-state="expanded"}
 
-code on [GitHub](https://github.com/srujanshenoy/PythonSite/blob/master/Script%20Files/Python%20Calculator/Python%20Calculator%20Opperation%20expantion.py)
+code on [GitHub](https://github.com/srujanshenoy/PythonSite/blob/master/Script%20files/Python%20Calculator/Python%20Calculator%20Opperation%20expantion.py)
