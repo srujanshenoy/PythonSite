@@ -11,5 +11,6 @@
         <toc-element topic="Define-the-functions.md"/>
         <toc-element topic="Code-the-functions.md"/>
         <toc-element topic="Code-the-logic.md"/>
+        <toc-element topic="Expand-the-code.md"/>
     </toc-element>
 </instance-profile>

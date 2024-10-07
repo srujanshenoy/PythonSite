@@ -1,0 +1,203 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#6C46BC" data-resizable-sidebar="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="built-on" content="2024-10-07T16:52:02.8746972"><title>Expand the code | Python</title><script type="application/json" id="virtual-toc-data">[{"id":"expansion-1-accepting-floats","level":0,"title":"Expansion 1: Accepting floats","anchor":"#expansion-1-accepting-floats"},{"id":"expansion-2-accepting-more-operations","level":0,"title":"Expansion 2: Accepting more operations","anchor":"#expansion-2-accepting-more-operations"},{"id":"final-code","level":0,"title":"FINAL CODE","anchor":"#final-code"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Expand the code | Python"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/expand-the-code.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Expand the code | Python"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/expand-the-code.html#webpage",
+    "url": "writerside-documentation/expand-the-code.html",
+    "name": "Expand the code | Python",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Python Help"
+}</script><!-- End Schema.org --></head><body data-id="Expand-the-code" data-main-title="Expand the code" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Python-Calculator.md|Python Calculator"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Expand-the-code" id="Expand-the-code.md">Expand the code</h1><section class="chapter"><h2 id="expansion-1-accepting-floats" data-toc="expansion-1-accepting-floats">Expansion 1: Accepting floats</h2><ul class="list _bullet" id="-hbpfre_6"><li class="list__item" id="-hbpfre_8"><p>Instead of only accepting number like 1, 2, 3, 4, ...</p></li><li class="list__item" id="-hbpfre_9"><p>Let us make our calculator accept numbers like 2.56, 3.123567, etc.</p></li></ul><section class="chapter"><h3 id="process" data-toc="process">Process</h3><ul class="list _bullet" id="-hbpfre_10"><li class="list__item" id="-hbpfre_14"><p>We have used the function <code class="code" id="-hbpfre_18">int_input()</code> in our code to take the numbers.</p></li><li class="list__item" id="-hbpfre_15"><p>This function only accepts integers</p></li><li class="list__item" id="-hbpfre_16"><p>We want it to also accept floats.</p></li><li class="list__item" id="-hbpfre_17"><p>to do this, we just need to change </p><ul class="list _bullet" id="-hbpfre_19"><li class="list__item" id="-hbpfre_20"><p>The name of the function,</p></li><li class="list__item" id="-hbpfre_21"><p>the <code class="code" id="-hbpfre_23">int()</code> to <code class="code" id="-hbpfre_24">float()</code> in the try-except block and return block</p></li><li class="list__item" id="-hbpfre_22"><p>and the usage of the function name everywhere.</p></li></ul></li></ul><section class="chapter"><h4 id="1-change-the-function-name" data-toc="1-change-the-function-name">1. Change the function name</h4><div class="code-block" data-lang="python">
+def float_input(prompt: str) -&gt; int:
+    try:
+        return int(input(prompt))
+    except ValueError:
+        print(&quot;Invalid input. Please enter an integer.&quot;)
+        return int_input(prompt)
+</div></section><section class="chapter"><h4 id="2-change-int-to-float" data-toc="2-change-int-to-float">2. Change int() to float()</h4><div class="code-block" data-lang="python">
+def float_input(prompt: str) -&gt; int:
+    try:
+        return float(input(prompt))
+    except ValueError:
+        print(&quot;Invalid input. Please enter an integer.&quot;)
+        return float_input(prompt)
+</div></section><section class="chapter"><div class="collapse"><div class="collapse__title"><h4 id="3-change-the-function-name-in-the-code-full-code-below" data-toc="3-change-the-function-name-in-the-code-full-code-below">3. Change the function name in the code (full code below)</h4></div><div class="collapse__content"><div class="code-block" data-lang="python">
+def float_input(prompt: str) -&gt; int:
+    try:
+        return float(input(prompt))
+    except ValueError:
+        print(&quot;Invalid input. Please enter an integer.&quot;)
+        return float_input(prompt)
+
+
+def opperator_input():
+    user_input = input(&quot;Enter an opperator(+, -, x, *, /): &quot;)
+    if user_input in ['+', '-', 'x', '/']:
+        return user_input
+    else:
+        return opperator_input()
+
+
+def continue_calculating():
+    user_input = input(&quot;Continue? (enter for yes, anything else for no): &quot;)
+    return user_input == &quot;&quot;  # This line checks if the user's input is empty. If it is, returns True, else false.
+
+
+def calc(previous_result: float, starting: bool):
+    a = float_input(&quot;Enter the first number: &quot;) if starting else previous_result
+    opperator = opperator_input()
+    b = float_input(&quot;Enter the second number: &quot;)
+
+    result = 0
+
+    if opperator == '+':
+        result = a + b
+    elif opperator == '-':
+        result = a - b
+    elif opperator == 'x':
+        result = a * b
+    elif opperator == '/':
+        result = (a/b) if b != 0 else 0
+
+
+
+    print(f&quot;{a} {opperator} {f&quot;({b})&quot; if (b &lt; 0) else b} = {result} {&quot;[RESET: Zero division error]&quot; if (b == 0 and opperator == '/') else &quot;&quot;} &quot;)
+    # This line started as
+    # print(f&quot;{a} {opperator} {b} = {result}&quot;)
+    #
+    # Then, for appearance, if the user inputs a negative number for b, it should be represented as (-b)
+    # So for brackets and the check together, the {b} became
+    #                                             {f&quot;({b})&quot; if (b &lt; 0) else b}
+    #
+    # Then, for the zero division error, it should be represented as [RESET: Zero division error]
+    # So for the check and the brackets together, the {result} became
+    #                                             {result} {&quot;[RESET: Zero division error]&quot; if (b == 0 and opperator == '/') else &quot;&quot;}
+
+
+
+    if continue_calculating(): return calc(result, False)
+    else: return result
+
+if __name__ == '__main__':
+    calc(0, True)
+</div></div></div></section></section></section><section class="chapter"><h2 id="expansion-2-accepting-more-operations" data-toc="expansion-2-accepting-more-operations">Expansion 2: Accepting more operations</h2><ul class="list _bullet" id="-hbpfre_28"><li class="list__item" id="-hbpfre_37"><p id="-hbpfre_44">Now that we have expanded the numbers, what else is there?</p></li><li class="list__item" id="-hbpfre_38"><p id="-hbpfre_45">Right! The operations!</p></li><li class="list__item" id="-hbpfre_39"><p id="-hbpfre_46">Currently, it takes +, -, x and /</p></li><li class="list__item" id="-hbpfre_40"><p id="-hbpfre_47">We want it to take +, -, x, *, **, ^, nrt(nth root), /</p></li><li class="list__item" id="-hbpfre_41"><p id="-hbpfre_48">Square root has to be inputted as nrt 2</p></li><li class="list__item" id="-hbpfre_42"><p id="-hbpfre_49">To do this, we need to change the <code class="code" id="-hbpfre_50">opperator_input()</code> function. Specifically, we need to change the list in it</p></li><li class="list__item" id="-hbpfre_43"><p id="-hbpfre_51">Current code, Changed list code</p></li></ul><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def opperator_input():">
+def opperator_input():
+    user_input = input(&quot;Enter an opperator(+, -, x, *, /): &quot;)
+    if user_input in ['+', '-', 'x', '/']:
+        return user_input
+    else:
+        return opperator_input()
+</div><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def opperator_input():">
+def opperator_input():
+    user_input = input(&quot;Enter an opperator(+, -, x, *, x, ^, **, nrt, /): &quot;)
+    if user_input in ['+', '-', 'x', '/', '*', '**', '^', 'nrt']:
+        return user_input
+    else:
+        return opperator_input()
+</div><ul class="list _bullet" id="-hbpfre_31"><li class="list__item" id="-hbpfre_52"><p>Now, to add in the extra opperators *, **, ^, nrt</p></li><li class="list__item" id="-hbpfre_53"><p>We have handled the operation code in this:</p></li></ul><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="if opperator == '+':">
+    if opperator == '+':
+        result = a + b
+    elif opperator == '-':
+        result = a - b
+    elif opperator == 'x':
+        result = a * b
+    elif opperator == '/':
+        result = (a/b) if b != 0 else 0
+</div><ul class="list _bullet" id="-hbpfre_33"><li class="list__item" id="-hbpfre_54"><p>To add these opperators, we need these lines in it: </p><ul class="list _bullet" id="-hbpfre_55"><li class="list__item" id="-hbpfre_56"><p>First, change the line <code class="code" id="-hbpfre_58">elif opperation == 'x'</code> to <code class="code" id="-hbpfre_59">elif opperation == ('x' or '*'):</code></p></li><li class="list__item" id="-hbpfre_57"><p>Then add the following four lines for **, ^, and nth root:</p></li></ul></li></ul><div class="code-block" data-lang="python">
+elif opperation == ('**' or '^'):
+    result = a ** b
+elif opperation == 'nrt':
+    result = a ** (1/b)
+</div><ul class="list _bullet" id="-hbpfre_35"><li class="list__item" id="-hbpfre_60"><p>So now our code becomes</p></li></ul><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def opperator_input():">
+def opperator_input():
+    user_input = input(&quot;Enter an opperator(+, -, x, *, x, ^, **, nrt, /): &quot;)
+    if user_input in ['+', '-', 'x', '/', '*', '**', '^', 'nrt']:
+        return user_input
+    else:
+        return opperator_input()
+
+def calc(...):
+
+    if opperator == '+':
+        result = a + b
+    elif opperator == '-':
+        result = a - b
+    elif opperator == ('x' or '*'):
+        result = a * b
+    elif opperator == '/':
+        result = (a/b) if b != 0 else 0
+    elif opperator == ('**' or '^'):
+        result = a ** b
+    elif opperator == 'nrt':
+        result = a ** (1/b)
+    
+    ...
+</div></section><section class="chapter"><h2 id="final-code" data-toc="final-code">FINAL CODE</h2><div class="code-collapse" data-lang="python" data-is-expanded="true" data-synopsis="def float_input(prompt: str) -&gt; int:">
+def float_input(prompt: str) -&gt; int:
+    try:
+        return float(input(prompt))
+    except ValueError:
+        print(&quot;Invalid input. Please enter an integer.&quot;)
+        return float_input(prompt)
+
+
+def opperator_input():
+    user_input = input(&quot;Enter an opperator(+, -, x, *, x, ^, **, nrt, /): &quot;)
+    if user_input in ['+', '-', 'x', '/', '*', '**', '^', 'nrt']:
+        return user_input
+    else:
+        return opperator_input()
+
+
+def continue_calculating():
+    user_input = input(&quot;Continue? (enter for yes, anything else for no): &quot;)
+    return user_input == &quot;&quot;  # This line checks if the user's input is empty. If it is, returns True, else false.
+
+
+def calc(previous_result: float, starting: bool):
+    a = float_input(&quot;Enter the first number: &quot;) if starting else previous_result
+    opperator = opperator_input()
+    b = float_input(&quot;Enter the second number: &quot;)
+
+    result = 0
+
+    if opperator == '+':
+        result = a + b
+    elif opperator == '-':
+        result = a - b
+    elif opperator == ('x' or '*'):
+        result = a * b
+    elif opperator == '/':
+        result = (a/b) if b != 0 else 0
+    elif opperator == ('**' or '^'):
+        result = a ** b
+    elif opperator == 'nrt':
+        result = a ** (1/b)
+
+    print(f&quot;{a} {opperator} {f&quot;({b})&quot; if (b &lt; 0) else b} = {result} {&quot;[RESET: Zero division error]&quot; if (b == 0 and opperator == '/') else &quot;&quot;} &quot;)
+    # This line started as
+    # print(f&quot;{a} {opperator} {b} = {result}&quot;)
+    #
+    # Then, for appearance, if the user inputs a negative number for b, it should be represented as (-b)
+    # So for brackets and the check together, the {b} became
+    #                                             {f&quot;({b})&quot; if (b &lt; 0) else b}
+    #
+    # Then, for the zero division error, it should be represented as [RESET: Zero division error]
+    # So for the check and the brackets together, the {result} became
+    #                                             {result} {&quot;[RESET: Zero division error]&quot; if (b == 0 and opperator == '/') else &quot;&quot;}
+
+
+
+    if continue_calculating(): return calc(result, False)
+    else: return result
+
+if __name__ == '__main__':
+calc(0, True)
+
+</div><p id="-hbpfre_62">code on <a href="https://github.com/srujanshenoy/PythonSite/blob/master/Script%20Files/Python%20Calculator/Python%20Calculator%20Opperation%20expantion.py" id="-hbpfre_63" data-external="true" rel="noopener noreferrer">GitHub</a></p></section><div class="last-modified">Last modified: 07 October 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="code-the-logic.html" class="navigation-links__prev">Code the logic</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.js"></script></body></html>
