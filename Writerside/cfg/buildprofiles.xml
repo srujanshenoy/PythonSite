@@ -7,7 +7,19 @@
     <build-profile instance="p">
         <variables>
             <noindex-content>false</noindex-content>
+            <primary-color>iris</primary-color>
+            <color-preset>contrast</color-preset>
+            <download-title>Github</download-title>
+            <download-page>https://github.com/srujanshenoy/</download-page>
+            <showDownloadButton>true</showDownloadButton>
         </variables>
+        <footer>
+            <social type="youtube" href="https://youtube.com/@TheYoungCreators"/>
+            <social type="email" href="srujanshenoy2@gmail.com"/>
+            <link href="https://github.com/srujanshenoy/PythonSite/tree/master/Script%20files">Script Files</link>
+            <link href="https://github.com/srujanshenoy/MY_PYTHON_LEARNING_REPLACED">MPLR - All my python</link>
+            <link href="https://chatgpt.com">My Helper</link>
+        </footer>
     </build-profile>
 
 </buildprofiles>
