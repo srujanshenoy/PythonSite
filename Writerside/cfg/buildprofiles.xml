@@ -12,6 +12,7 @@
             <download-title>Github</download-title>
             <download-page>https://github.com/srujanshenoy/</download-page>
             <showDownloadButton>true</showDownloadButton>
+            <resizable-sidebar>true</resizable-sidebar>
         </variables>
         <footer>
             <social type="youtube" href="https://youtube.com/@TheYoungCreators"/>

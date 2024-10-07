@@ -21,8 +21,8 @@ def continue_calculating():
 
 def calc(previous_result: float, starting: bool):
     a = int_input("Enter the first number: ") if starting else previous_result
-    b = int_input("Enter the second number: ")
     opperator = opperator_input()
+    b = int_input("Enter the second number: ")
 
     result = 0
 
